@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //残機の管理
 public class LifeManager : MonoBehaviour
@@ -19,10 +20,16 @@ public class LifeManager : MonoBehaviour
     void Update()
     {
         //====敵に侵入されたらHPのUIを1つずつ減らす処理====//
-        if (/*敵が監視室に侵入してきたら&&*/ life > 0)
+        if (/*敵が監視室に侵入してきたら&&*/Input.GetMouseButtonDown(0)&& life > 0)
         {
             hp[life - 1].SetActive(false);
             life--;
+        }
+
+        //====残機が0になったらゲームオーバーシーンに切り替え====//
+        if (life == 0)
+        {
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

@@ -11,11 +11,6 @@ public class LifeManager : MonoBehaviour
     public GameObject[] hp = new GameObject[3];
     public int life=3;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -26,4 +21,11 @@ public class LifeManager : MonoBehaviour
             life--;
         }
     }
+
+    /*memo
+        OnTriggerEnter(Collider other{
+            
+    
+    }
+    */
 }

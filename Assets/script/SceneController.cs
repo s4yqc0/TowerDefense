@@ -20,7 +20,7 @@ public class SceneController : MonoBehaviour
         
         //==== ゲームオーバーシーンに切り替え ====//
 
-        if (lifeManager.life == 0)
+        if (lifeManager.life <= 0)
         {
             SceneManager.LoadScene("GameOverScene");
         }

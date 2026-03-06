@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class LifeManager : MonoBehaviour
 {
     public GameObject[] hp = new GameObject[3];
-    private int life=3;
+    public int life=3;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +24,6 @@ public class LifeManager : MonoBehaviour
         {
             hp[life - 1].SetActive(false);
             life--;
-        }
-
-        //====残機が0になったらゲームオーバーシーンに切り替え====//
-        if (life == 0)
-        {
-            SceneManager.LoadScene("GameOverScene");
         }
     }
 }

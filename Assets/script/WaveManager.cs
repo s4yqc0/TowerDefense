@@ -6,8 +6,8 @@ using UnityEngine;
 //ウェーブの管理
 public class WaveManager : MonoBehaviour
 {
-    private int nowWave = 1;
-    private int maxWave = 3;
+    public int nowWave = 1;
+    public int maxWave = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -18,17 +18,13 @@ public class WaveManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //====Enemyタグを探す====//
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         //====enemyが0だったら次のウェーブに行く====//
-        if (nowWave >= maxWave && enemies.Length == 0)
+        if (nowWave <= maxWave && enemies.Length == 0)
         {
             NextWave();
-        }
-
-        if(nowWave==maxWave)
-        {
-            //ゲームクリア処理
         }
     }
 

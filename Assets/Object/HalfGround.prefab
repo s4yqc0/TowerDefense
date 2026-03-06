@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: ce1e1c6afeb8a4c4da4ab18e701d36cc, type: 3}
       propertyPath: m_Name
-      value: Floor Tile 01
+      value: HalfGround
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce1e1c6afeb8a4c4da4ab18e701d36cc, type: 3}
       propertyPath: m_LocalScale.x
@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ce1e1c6afeb8a4c4da4ab18e701d36cc, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: ce1e1c6afeb8a4c4da4ab18e701d36cc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 13eea2f31fbf6334e809e03bd7a121ac, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
